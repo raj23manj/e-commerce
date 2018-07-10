@@ -55,7 +55,7 @@ ROOT_URLCONF = 'ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'shop', 'templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -63,6 +63,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'shop.context_processors.menu_links'
             ],
         },
     },
@@ -127,3 +128,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 # admin password
 #rmanjunath
 #rmanjunath23
+
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'producthunt/static/')
+# ]
