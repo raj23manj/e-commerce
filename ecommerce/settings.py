@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'shop',
     'search_app',
-    'cart'
+    'cart',
+    'stripe'
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'producthunt/static/')
 # ]
+
+###stripe Test account Informations
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_ifg1PQmJfvmXymz5NrAxNU54'
+STRIPE_SECRET_KEY = 'sk_test_hETtm8hhDFb3GPyUDlHPfDYW'
