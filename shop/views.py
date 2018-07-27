@@ -70,4 +70,7 @@ def signinView(request):
 def signoutView(request):
     logout(request)
     return redirect('signin')
-        
+
+
+def dynamicContent(request):
+    return '';        
