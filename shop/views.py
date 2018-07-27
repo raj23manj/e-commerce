@@ -73,4 +73,5 @@ def signoutView(request):
 
 
 def dynamicContent(request):
-    return '';        
+    product = Product.objects.all().filter(available=True)[0]
+    return render(request, 'shop/partials/product_details.html', {'product': product})       
